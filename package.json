@@ -1,0 +1,35 @@
+{
+  "name": "englishify",
+  "version": "1.0.0",
+  "description": "A utility to convert Arabic-Indic digits to English digits.",
+  "main": "dist/englishify.js",
+  "types": "dist/englishify.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.5",
+    "ts-jest": "^29.4.1",
+    "typescript": "^5.9.2"
+  },
+  "keywords": [
+    "arabic",
+    "insdian",
+    "numbers",
+    "digits",
+    "numerical",
+    "english",
+    "englishify",
+    "conversion",
+    "utility"
+  ],
+  "author": "Hani Yahya",
+  "license": "ISC",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
+}

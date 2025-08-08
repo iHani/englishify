@@ -1,0 +1,17 @@
+src/
+test/
+*.test.ts
+*.spec.ts
+jest.config.js
+tsconfig.json
+node_modules/
+coverage/
+*.log
+.DS_Store
+.git
+.gitignore
+.vscode/
+README.md~
+package-lock.json
+pnpm-lock.yaml
+

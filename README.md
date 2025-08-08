@@ -1,76 +1,100 @@
 # Englishify
 
-Englishify is a TypeScript utility that recursively converts Arabic-Indic digits in any value (string, number, array, object, etc.) to English digits. This project provides a robust function that can be used in various applications where digit conversion is required, including deeply nested data structures.
+[![npm version](https://img.shields.io/npm/v/englishify.svg)](https://www.npmjs.com/package/englishify)
+[![GitHub stars](https://img.shields.io/github/stars/iHani/englishify.svg?style=social)](https://github.com/iHani/englishify)
 
-## Installation
+**Englishify** is a simple TypeScript/JavaScript utility that converts Arabic-Indic digits (٠١٢٣٤٥٦٧٨٩) to English digits (0123456789) in any value.  
+It works with strings, arrays, objects, and even deeply nested structures—making it perfect for form inputs, APIs, and data cleaning.
 
-Install the package from npm:
+---
+
+## 🚀 Installation
+
+Install using npm or pnpm:
 
 ```bash
 npm install englishify
-# or using pnpm
+# or
 pnpm add englishify
 ```
 
-## Usage
+---
 
-You can use the `englishify` function by importing it into your TypeScript or JavaScript files:
+## ✨ Usage
+
+Import and use the `englishify` function in your project:
 
 ```typescript
 import { englishify } from 'englishify';
 
-// Strings
+// Convert Arabic-Indic digits to English digits in strings
 console.log(englishify("١٢٣٤٥٦٧٨٩٠")); // "1234567890"
 
-// Numbers
-console.log(englishify(٢٠٢٥)); // "2025"
+// Convert numbers to English digits in strings
+console.log(englishify("رقم: ١٢٣٤٥")); // "رقم: 12345"
 
-// Arrays
-console.log(englishify(["١٢٣", ٤٥٦, "abc", 789])); // ["123", "456", "abc", "789"]
+// Convert a number (returns the number as-is)
+console.log(englishify(2025)); // 2025
 
-// Objects
-console.log(englishify({ a: "١٢٣", b: ٤٥٦, c: ["٧٨٩", { d: "٠" }] }));
-// { a: "123", b: "456", c: ["789", { d: "0" }] }
+// Convert an array
+console.log(englishify(["١٢٣", "٤٥٦", "abc", 789]));
+// ["123", "456", "abc", 789]
 
-// Deeply nested structures
-const input = { a: ["١٢٣", { b: ٤٥٦, c: ["٧٨٩", { d: "٠" }] }] };
+// Convert an object
+console.log(englishify({ a: "١٢٣", b: "٤٥٦", c: "abc", d: 789 }));
+// { a: "123", b: "456", c: "abc", d: 789 }
+
+// Convert deeply nested structures
+const input = { a: ["١٢٣", { b: "٤٥٦", c: ["٧٨٩", { d: "٠" }] }] };
 console.log(englishify(input));
 // { a: ["123", { b: "456", c: ["789", { d: "0" }] }] }
 ```
 
-### Function Signature
+---
+
+## 📝 API
 
 ```typescript
 englishify(input: any): any
 ```
 
-- **input**: Any value (string, number, array, object, etc.) containing Arabic-Indic digits (٠١٢٣٤٥٦٧٨٩).
-- **returns**: The processed value with all Arabic-Indic digits replaced by English digits (0-9).
+- **input**: Any value (string, number, array, object, etc.) containing Arabic-Indic digits.
+- **returns**: The same structure, with all Arabic-Indic digits replaced by English digits. Numbers are returned as-is.
 
-### Examples
+---
+
+## 💡 Examples
 
 ```typescript
 englishify("١٢٣٤٥٦٧٨٩٠"); // "1234567890"
-englishify(٢٠٢٥); // "2025"
-englishify(["١٢٣", ٤٥٦, "abc", 789]); // ["123", "456", "abc", "789"]
-englishify({ a: "١٢٣", b: [٤٥٦, { c: "٧٨٩" }] }); // { a: "123", b: ["456", { c: "789" }] }
+englishify(٢٠٢٥); // 2025
+englishify(["١٢٣", "٤٥٦", "abc", 789]); // ["123", "456", "abc", 789]
+englishify({ a: "١٢٣", b: [ "٤٥٦", { c: "٧٨٩" } ] }); // { a: "123", b: ["456", { c: "789" }] }
 englishify(null); // null
 englishify(undefined); // undefined
 englishify(true); // true
 ```
 
-## Testing
+---
 
-This project uses Jest for testing. To run the tests, use the following command:
+## 🧪 Testing
+
+This project uses [Jest](https://jestjs.io/) for testing.  
+To run the tests:
 
 ```bash
 npm test
 ```
 
-## Contributing
+---
 
-Contributions are welcome! Please feel free to submit a pull request or open an issue for any enhancements or bug fixes.
+## 🤝 Contributing
 
-## License
+Contributions are welcome!  
+Feel free to [open an issue](https://github.com/iHani/englishify/issues) or submit a pull request.
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.

@@ -1,9 +1,9 @@
 {
   "name": "englishify",
-  "version": "1.0.0",
-  "description": "A utility to convert Arabic-Indic digits to English digits.",
-  "main": "dist/englishify.js",
-  "types": "dist/englishify.d.ts",
+  "version": "2.0.0",
+  "description": "A utility to convert Arabic-Indic digits to English digits and vice versa.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest"

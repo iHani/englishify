@@ -1,4 +1,4 @@
-import { englishify } from '../src/englishify';
+import { englishify } from '../src';
 
 describe('englishify', () => {
     it('should convert Arabic-Indic digits to English digits in strings', () => {

@@ -25,6 +25,10 @@
     "conversion",
     "utility"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iHani/englishify.git"
+  },
   "author": "Hani Yahya",
   "license": "ISC",
   "files": [
